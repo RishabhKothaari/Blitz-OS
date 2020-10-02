@@ -16,3 +16,7 @@ Implement FrameManager, ProcessManager, ThreadManager using Monitors.
 ## Project Part-5 : [p5](https://github.com/rishab-pdx/Blitz-OS/tree/main/Project%205)
 Implement user level process running in its own address space and making system calls to the Kernel causing CPU to switch from user
 mode to kernel mode
+
+
+# Credits
+This project is part of [Blitz OS] (http://web.cecs.pdx.edu/~walpole/class/cs510/fall2017/project/)
