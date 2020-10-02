@@ -1,0 +1,154 @@
+Beginning execution...
+====================  KPL PROGRAM STARTING  ====================
+Initializing Thread Scheduler...
+Initializing Thread Manager...
+Initializing Frame Manager...
+AllocateRandomFrames called.  NUMBER_OF_PHYSICAL_PAGE_FRAMES = 100
+Initializing Disk Driver...
+Initializing File Manager...
+User-level program 'TestProgram1' is running...
+
+***** Testing Syscall Parameter Passing *****
+
+***** About to call Sys_Yield...
+***** Should print:
+*****     Handle_Sys_Yield invoked!
+
+Handle_Sys_Yield Invoked!
+
+***** About to call Sys_Fork...
+***** Should print:
+*****     Handle_Sys_Fork invoked!
+
+Handle_Sys_Fork Invoked!
+
+***** About to call Sys_Join...
+***** Should print:
+*****     Handle_Sys_Join invoked!
+*****     processID = 1111
+
+Handle_Sys_Join Invoked!
+processID = 1111
+
+***** About to call Sys_Create...
+***** Should print:
+*****     Handle_Sys_Create invoked!
+*****     virt addr of filename = 0x0000BFF8
+*****     filename = MyFileName
+
+Handle_Sys_Create Invoked!
+virt addr of filename = 0x0000BFF8
+filename = MyFileName
+
+***** About to call Sys_Open...
+***** Should print:
+*****     Handle_Sys_Open invoked!
+*****     virt addr of filename = 0x0000BFF8
+*****     filename = MyFileName
+
+Handle_Sys_Open Invoked!
+virt addr of filename = 0x0000BFF8
+filename = MyFileName
+
+***** About to call Sys_Read...
+***** Should print:
+*****     Handle_Sys_Read invoked!
+*****     fileDesc = 2222
+*****     virt addr of buffer = 0x0000B0B0
+*****     sizeInBytes = 3333
+
+Handle_Sys_Read Invoked!
+fileDesc = 2222
+virt addr of buffer = 0x0000B0B0
+sizeInBytes = 3333
+
+***** About to call Sys_Write...
+***** Should print:
+*****     Handle_Sys_Write invoked!
+*****     fileDesc = 4444
+*****     virt addr of buffer = 0x0000B0B0
+*****     sizeInBytes = 5555
+
+Handle_Sys_Write Invoked!
+fileDesc = 4444
+virt addr of buffer = 0x0000B0B0
+sizeInBytes = 5555
+
+***** About to call Sys_Seek...
+***** Should print:
+*****     Handle_Sys_Seek invoked!
+*****     fileDesc = 6666
+*****     newCurrentPos = 7777
+
+Handle_Sys_Seek Invoked!
+fileDesc = 6666
+newCurrentPos = 7777
+
+***** About to call Sys_Close...
+***** Should print:
+*****     Handle_Sys_Close invoked!
+*****     fileDesc = 8888
+
+Handle_Sys_Close Invoked!
+fileDesc = 8888
+
+***** About to call Sys_Exit...
+***** Should print:
+*****     Handle_Sys_Exit invoked!
+*****     returnStatus = 9999
+
+Handle_Sys_Exit Invoked!
+returnStatus = 9999
+
+***** Syscall Test Complete *****
+
+***** Testing Exec Syscall *****
+
+***** About to call Sys_Exec with a non-existant file...
+***** Should print:
+*****     Okay
+
+Handle_Sys_Exec Invoked!
+Okay
+
+***** About to call Sys_Exec with an overly long file name...
+***** Should print:
+*****     Okay
+
+Handle_Sys_Exec Invoked!
+Okay
+
+***** About to perform a successful Exec and jump to TestProgram2...
+***** Should print:
+*****     User-level program 'TestProgram2' is running!
+
+Handle_Sys_Exec Invoked!
+User-level program 'TestProgram2' is running!
+
+***** About to call Sys_Shutdown...
+***** Should print:
+*****     FATAL ERROR in UserProgram: "Syscall 'Shutdown' was invoked by a user thread" -- TERMINATING!
+Handle_Sys_Shutdown Invoked!
+
+FATAL ERROR in UserProgram: "Syscall 'Shutdown' was invoked by a user thread" -- TERMINATING!
+
+(To find out where execution was when the problem arose, type 'st' at the emulator prompt.)
+
+====================  KPL PROGRAM TERMINATION  ====================
+Done!  The next instruction to execute will be:
+001078: C0100000       sethi   0x0000,r1        ! 0x00001088 = 4232 (noGoMessage)
+======================================================
+=====                                            =====
+=====         The BLITZ Machine Emulator         =====
+=====                                            =====
+=====  Copyright 2001-2007, Harry H. Porter III  =====
+=====                                            =====
+======================================================
+
+Enter a command at the prompt.  Type 'quit' to exit or 'help' for
+info about commands.
+> Number of Disk Reads    = 17
+Number of Disk Writes   = 0
+Instructions Executed   = 1348941
+Time Spent Sleeping     = 681
+    Total Elapsed Time  = 1349622
